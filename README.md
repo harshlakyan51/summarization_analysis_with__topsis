@@ -4,17 +4,17 @@ This project evaluates different text summarization models using the TOPSIS (Tec
 ## Project Overview
 The project compares four text summarization models:
 
- BART: A sequence-to-sequence model fine-tuned for summarization.
- T5: A text-to-text transformer model for various NLP tasks, including summarization.
- Pegasus: A transformer-based model for abstractive summarization.
- LED: A model designed for long-document summarization.
+ -BART: A sequence-to-sequence model fine-tuned for summarization.
+ -T5: A text-to-text transformer model for various NLP tasks, including summarization.
+ -Pegasus: A transformer-based model for abstractive summarization.
+ -LED: A model designed for long-document summarization.
 
 ## The evaluation metrics used are:
 
- Compression: The ratio of the summary length to the original text length.
- Readability: The Flesch Reading Ease score, measuring how easy the text is to read.
- Similarity: The cosine similarity between the summary and a reference summary.
- Inference Time: The time taken for the model to generate a summary.
+ -Compression: The ratio of the summary length to the original text length.
+ -Readability: The Flesch Reading Ease score, measuring how easy the text is to read.
+ -Similarity: The cosine similarity between the summary and a reference summary.
+ -Inference Time: The time taken for the model to generate a summary.
 ## Requirements
 To run the project, you'll need to install the following Python packages:
 
