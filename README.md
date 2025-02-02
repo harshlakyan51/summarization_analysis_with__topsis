@@ -2,19 +2,36 @@
 This project evaluates different text summarization models using the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) method. The evaluation is based on four metrics: Compression, Readability, Similarity, and Inference Time. The results are ranked based on these metrics, and visualized with simple plots for better comparison.
 
 ## Project Overview
-The project compares four text summarization models:
+This project compares the performance of four state-of-the-art text summarization models on a given text. The goal is to evaluate their ability to generate summaries that maintain the most important information while reducing the text length. The models compared are:
 
- -BART: A sequence-to-sequence model fine-tuned for summarization.
- -T5: A text-to-text transformer model for various NLP tasks, including summarization.
- -Pegasus: A transformer-based model for abstractive summarization.
- -LED: A model designed for long-document summarization.
+### BART (Bidirectional and Auto-Regressive Transformers):
+BART is a sequence-to-sequence model fine-tuned specifically for abstractive summarization tasks. It utilizes a transformer architecture and can generate human-like summaries from long documents.
 
-## The evaluation metrics used are:
+### T5 (Text-to-Text Transfer Transformer):
+T5 is a transformer-based model that frames all NLP tasks, including summarization, as text-to-text problems. It can generate a variety of outputs, making it versatile for different types of text generation tasks, including summarization.
 
- -Compression: The ratio of the summary length to the original text length.
- -Readability: The Flesch Reading Ease score, measuring how easy the text is to read.
- -Similarity: The cosine similarity between the summary and a reference summary.
- -Inference Time: The time taken for the model to generate a summary.
+### Pegasus (Pretrained Text-to-Text Transformer):
+Pegasus is a transformer-based model that has been specifically fine-tuned for abstractive summarization. It leverages large pretraining on summarization tasks to generate concise and informative summaries.
+
+### LED (Long-Document Encoder-Decoder):
+LED is designed for summarizing long documents. It uses a modified transformer architecture that can process long text sequences without running into issues like truncation, making it ideal for summarizing lengthy articles or reports.
+
+## Evaluation Metrics
+
+To evaluate the summarization performance of each model, the following metrics were used:
+
+### Compression:
+Compression measures how much the summary reduces the original text's length. It is calculated as the ratio of the length of the summary to the original text. A lower ratio indicates a more compressed summary.
+
+### Readability:
+Readability is measured using the Flesch Reading Ease score. This score evaluates how easy the text is to read based on factors like sentence length and word complexity. A higher score indicates that the summary is easier to read.
+
+### Similarity:
+Cosine similarity is calculated between the generated summary and a reference summary. This metric evaluates how similar the content of the generated summary is to the reference. A higher similarity score indicates a more accurate summary.
+
+### Inference Time:
+Inference time measures how long it takes for the model to generate a summary. Faster models are preferable for real-time applications, especially in cases where summarization needs to be done on the fly.
+
 ## Requirements
 To run the project, you'll need to install the following Python packages:
 
